@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud Resume Challenge: Nasir</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Montserrat font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+  </head>
+  <body>   
+    <section>
+      <!-- MOBILE NAVIGATION -->
+      <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
+        <a href="#home" class="w3-bar-item w3-button w3-hover-none">Resume</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleNavigation()">&#9776;</a>
+      </div>
+      <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
+        <a href="#about" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">ABOUT</a>
+        <a href="#resume" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">RESUME</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">CONTACT</a>
+      </div>
+
+      <!-- SOCIAL SECTION -->
+      <section class="image-section w3-quarter w3-fixed w3-padding-small">
+        <!--IMAGE/AVATAR-->
+        <img src="avatar.png" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important;"/>
+        <!--SCIAL NETWORK BUTTONS-->
+        <div class="links w3-margin-top w3-padding-small">
+          </a>
+          <a class="icon-link w3-text-sand w3-hover-text-amber" href="https://www.linkedin.com/in/nasir-thomas-10653a249/" target="_blank">
+             <i data-feather="linkedin"></i>
+          </a>
+        </div>
+        <!--CV DOWNLOAD BUTTON-->
+        <div class="w3-container w3-padding-16">
+        
+          </a>
+        </div>
+      </section>
+
+      <!--CV CONTENT SECTION-->
+      <section class="w3-threequarter w3-padding-large w3-right">
+        <!--DESKTOP NAVIGATION-->
+        <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
+          <a href="#home" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">Cloud Resume Challenge</a>
+          <a href="#contact" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
+          <a href="#resume" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">RESUME</a>
+          <a href="#about" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a>
+        </div>
+        <div class="content-container w3-margin-top-2">
+          <!--HOME SECTION-->
+          <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
+            <h1>Nasir Thomas</h2>
+              <H3>Atlanta, GA</h3>
+          </div>
+
+          <!--ABOUT SECTION-->
+          <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">ABOUT</h2>
+            <p class="w3-margin-top-2"> 
+              Performance-driven and motivated Systems Analyst specializing in system life cycle development, client relations, and data analysis. 
+              Proven ability to proactively improve processes to ensure continuous operational excellence and optimization.
+            </p>
+
+            <p>
+              This online resume is built based on Forrest Brazeal's <a href="https://cloudresumechallenge.dev/">Cloud Resume Challenge</a>. This is a static website hosted
+              on an S3 bucket using Cloudfront to enable HTTPS security. Route 53 is used in order to point my Cloudfront distribution to my custom domain. There is also a website counter at
+               the bottom of the page that uses a lambda function written in python that saves the visitor counter in Dynamo DB. I have Terraform scripts written in order to 
+               manage my AWS resources and be able to deploy them seamlessly. Finally when I push updates to my github repository, 
+               a pipeline in AWS CodePipline runs to update my website's S3 bucket automatically.
+              </thead>
+            </p>
+          </div>
+
+          <!--RESUME-->
+          <div id="resume" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">RESUME</h2>
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+
+              <!--EMPLOYMENT HISTORY SECTION-->
+              <h3 class="w3-border-amber">MY EMPLOYMENT HISTORY</h3>
+
+
+              <div class="">
+                <h4>HealthTrio (Atlanta,GA)</h4>
+                <h5><b>Systems Analyst II</b></h5>
+                <p>Feb 2023 - Present</p>
+                <ul class="w3-ul" style="font-weight: 500;">
+                  <li>Configure and manage FTP credentials for client implementations, ensuring secure and efficient file transfers</li>
+                  <li>Collaborate with clients in meetings to understand their requirements and provide technical support and guidance.</li> 
+                  <li>Manage and maintain employee accounts and access permissions, and ensure efficient and secure access to company systems and resources</li>
+                  <li>Work with developers to identify and troubleshoot occasional AWS issues, to ensure smooth and uninterrupted operation of business-critical applications </li>
+                </ul>
+  
+                <h5><b>Systems Analyst I</b></h5>
+                <p>June 2021 - Feb 2023</p>
+                <ul class="w3-ul" style="font-weight: 500;">
+                  <li>Created simple to complex queries involving joins, sub-queries, cases, and defined variables to resolve issues.</li>
+                  <li>Assessed and proposed software solutions to development teams while determining the impact on existing software and the business.</li> 
+                  <li>Formulated strategies to proactively resolve production issues and improve customer service across 5 million people in seven clients </li>
+                  <li>Conducted detailed analysis and generated key insights to fulfill client CMS requirements </li>
+                  <li>Developed Python scripts to automate the process of user account generation, reducing setup time by 50%</li>
+
+                </ul>
+              </div>
+
+              <div class="">
+                <h4>Rockdale County Public Schools (Conyers,GA)</h4>
+                <h5><b>Technology Intern</b></h5>
+                <p>Jun. 2019 – Jul. 2019	</p>
+                <ul class="w3-ul" style="font-weight: 500;">
+                  <li>Set up 250+ computers for county wide use, installed software as needed </li>
+                  <li>Prepared, maintained, and repaired technology equipment  </li>
+                  <li>Troubleshooted local school computer hardware and software problems</li>
+                </ul>
+              </div>
+             
+            <!---EDUCATION SECTION-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+              <h3 class="w3-border-amber">MY EDUCATION</h3>
+                <h4>Kennesaw State University (May 2021)</h4>
+                <p>Kennesaw, GA</p>
+                <p>Bachelor of Business Administration in Information Systems</p>
+                <p>GPA: 3.4</p>
+            </div>
+
+            <!--SKILLS SECTION-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+              <h3 class="w3-border-amber">MY SKILLS</h3>
+              <!--SOFT SKILLS-->
+              <!--TECHNICAL SKILLS-->
+                <ul class="w3-ul" style="font-weight: 500;">
+                 <li>Programming Languages: Python, Shell Scripting(Bash), SQL (PostgreSQL, MS SQL), HTML, CSS, Visual Basic                </li>
+                 <li>CI/CD Tools: Jenkins, Ansible, Git                </li>
+                 <li>Build Tools: Maven                </li>
+                 <li>Virtualization: Vagrant, Docker                </li>
+                 <li>Cloud: AWS (EC2, S3, Route53, CloudFront, Lambda, DynamoDB, API Gateway, Cloudwatch, Athena) </li>
+                 <li>Infrastructure as Code: Terraform</li>
+                 <li>Database management: Designing, Documentation, Troubleshooting, Query Optimization                 </li>
+                 <li>Operating Systems: Windows, Linux (RedHat, centOS, Ubuntu)                </li>
+                 <li>Project management: Agile methodologies, Jira                </li>
+                </ul>
+            </div>
+
+          <!--CONTACT SECTION-->
+          <div id="contact" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MY CONTACT DETAILS</h3>
+            <div class="w3-margin-top-2" style="font-weight: 500;">
+              <p>Name: Nasir Thomas</p>
+              <p>E-mail: nasirthomasit@gmail.com</p>
+            </div>
+          </div>
+          <body onload="updateCounter()">
+            <script>
+              
+        function updateCounter(){
+            fetch('https://ofqcj094c7.execute-api.us-east-1.amazonaws.com/PROD',{
+                method: 'GET'
+            })
+          .then(response => {
+            if (
+                // check if response's status is 200
+                response.ok
+            ) {
+              return response.json()
+            } else {
+              throw new Error('something went wrong');
+            }
+          })
+          .then(data => document.getElementById("hits").innerText = data.Visit_Count)
+        }
+        </script>
+            Visits: <span id="hits"></span>
+        
+        <!--FOOTER-->
+        <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+        <footer class="w3-container w3-border-top w3-center w3-margin-top-4">
+          <p>Made as part of the Cloud Resume Challenge</p>
+        <!-- End footer -->
+        </footer>
+
+        <!--END OF CV SECTION-->
+      </section>      
+    </section>
+    <script>
+      // Function to toggle mobile navigation
+      function toggleNavigation() {
+        let nav = document.getElementById("mobile-nav");
+        if (nav.classList.contains('w3-show')) {
+          nav.classList.remove('w3-show');
+        } else { 
+          nav.classList.add('w3-show');
+        }
+      }
+    </script>
+    <script>
+      // Script to load feather icons
+      feather.replace()
+    </script>
+  </body>
+</html>
