@@ -20,5 +20,4 @@ jobs:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         DISTRIBUTION_ID: 'E36RSGRPIMSGGZ'
         AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
-        SOURCE_DIR: 'public'      # optional: defaults to entire repository
-        DEST_DIR: 'subdirectory'      # optional: defaults to the root of the bucket
+   
