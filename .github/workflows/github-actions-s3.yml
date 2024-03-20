@@ -21,4 +21,3 @@ jobs:
         DISTRIBUTION_ID: 'E36RSGRPIMSGGZ'
         AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
         SOURCE_DIR: 'website'      # optional: defaults to entire repository
-        DEST_DIR: 'website/'      # optional: defaults to the root of the bucket
