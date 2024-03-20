@@ -8,12 +8,13 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: Github Workflows
     steps:
     - uses: actions/checkout@v2
     - uses: kersvers/s3-sync-with-cloudfront-invalidation@v1.0.0
       with:
         args: --acl public-read --follow-symlinks --delete
-      env: Github Workflows
+      env: 
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
