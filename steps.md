@@ -5,7 +5,7 @@ Todo list:
     ACM_CERT(Connected to Cloudfront) - Done
     Lambda terraform script - Done
     Dynamo DB terraform - Done
-    Redo S3 bucket file - Done
+    S3 bucket file - Done
     API_Gateway(connected to lambda) - Done 
     Cloudfront(Connected to Route 53)
     Route 53 (Utilizes ACM_CERT & CloudFront)
