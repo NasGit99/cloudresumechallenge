@@ -2,14 +2,14 @@ Todo list:
 
 1. Purchase new domain - Done
 2. Edit Terraform for:
-    ACM_CERT(Connected to Cloudfront) - Done
-    Lambda terraform script - Done
-    Dynamo DB terraform - Done
-    S3 bucket file - Done
-    API_Gateway(connected to lambda) - Done 
-    Cloudfront(Connected to Route 53)
-    Route 53 (Utilizes ACM_CERT & CloudFront)
-3. Redo Var.tf
+<ul>
+<li>ACM_CERT(Connected to Cloudfront) -Done</li>
+<li>Lambda terraform script - Done</li>
+<li>Dynamo DB terraform - Done</li>
+<li>S3 bucket file - Done</li>
+<li>API_Gateway(connected to lambda) - Done </li>
+<li>Cloudfront(Connected to GoDaddy)</li>
+</ul>
+3. Redo Var.tf (DONE)
 4. Github actions to resume updates so they appear automatically (will need to invalidate cloudfront)
-5. CI/CD for Python tests
-
+5. Add monitoring with cloudwatch
