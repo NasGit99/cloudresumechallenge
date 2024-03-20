@@ -8,7 +8,7 @@ Todo list:
 <li>Dynamo DB terraform - Done</li>
 <li>S3 bucket file - Done</li>
 <li>API_Gateway(connected to lambda) - Done </li>
-<li>Cloudfront(Connected to GoDaddy)</li>
+<li>Cloudfront(Connected to GoDaddy) - Done</li>
 </ul>
 
 3. Redo Var.tf (DONE)
