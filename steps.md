@@ -10,6 +10,7 @@ Todo list:
 <li>API_Gateway(connected to lambda) - Done </li>
 <li>Cloudfront(Connected to GoDaddy)</li>
 </ul>
+
 3. Redo Var.tf (DONE)
 4. Github actions to resume updates so they appear automatically (will need to invalidate cloudfront)
 5. Add monitoring with cloudwatch
