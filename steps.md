@@ -11,6 +11,6 @@ Todo list:
 <li>Cloudfront(Connected to GoDaddy) - Done</li>
 </ul>
 
-3. Redo Var.tf (DONE)
-4. Github actions to resume updates so they appear automatically (will need to invalidate cloudfront)
+3. Redo Var.tf - Done
+4. Github actions to resume updates so they appear automatically (will need to invalidate cloudfront) - Done
 5. Add monitoring with cloudwatch
