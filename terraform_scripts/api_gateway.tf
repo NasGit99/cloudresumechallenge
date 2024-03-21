@@ -164,12 +164,12 @@ data "aws_iam_policy_document" "api_counter_policy_doc" {
     effect = "Allow"
 
     principals {
-      type        = "AWS"
+      type        = "*"
       identifiers = ["*"]
     }
 
     actions   = ["execute-api:Invoke"]
-    resources = [aws_api_gateway_rest_api.api_counter.execution_arn]
+    resources = [format("%s/%s",aws_api_gateway_rest_api.api_counter.execution_arn,"DEV/main/*")]
 
   }
 }
