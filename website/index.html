@@ -72,7 +72,7 @@ decision-makers.
 
             <p>
               This online resume is built based on Forrest Brazeal's <a href="https://cloudresumechallenge.dev/">Cloud Resume Challenge</a>. This is a static website hosted
-              on an S3 bucket using Cloudfront to enable HTTPS security. Route 53 is used in order to point my Cloudfront distribution to my custom domain. There is also a website counter at
+              on an S3 bucket using Cloudfront to enable HTTPS security. GoDaddy is used in order to point my Cloudfront distribution to my custom domain. There is also a website counter at
                the bottom of the page that uses a lambda function written in python that saves the visitor counter in Dynamo DB. I have Terraform scripts written in order to 
                manage my AWS resources and be able to deploy them seamlessly. Finally when I push updates to my github repository, 
                GitHub Actions updates the S3 Bucket and invalidates the CloudFront Distribution to update the website.
