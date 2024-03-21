@@ -10,6 +10,7 @@ resource "aws_api_gateway_rest_api" "api_counter" {
   }
 }
 
+
 #API Gateway Resource
 
 resource "aws_api_gateway_resource" "api_counter_gateway" {
@@ -17,6 +18,9 @@ resource "aws_api_gateway_resource" "api_counter_gateway" {
   parent_id   = aws_api_gateway_rest_api.api_counter.root_resource_id
   path_part   = "main"
 }
+
+#Enabling CORS
+Need to enable CORS later on
 
 
 #Defining the integration to lambda for GET
@@ -33,7 +37,7 @@ resource "aws_api_gateway_integration" "api_counter_integration_get" {
 }
 
 #Defining the integration to lambda for POST
-
+/*
 resource "aws_api_gateway_integration" "api_counter_integration_post" {
   rest_api_id             = aws_api_gateway_rest_api.api_counter.id
   resource_id             = aws_api_gateway_resource.api_counter_gateway.id
@@ -44,6 +48,7 @@ resource "aws_api_gateway_integration" "api_counter_integration_post" {
   passthrough_behavior      = "WHEN_NO_TEMPLATES"
 
 }
+*/
 
 #Defining the GET method
 
@@ -55,13 +60,14 @@ resource "aws_api_gateway_method" "api_counter_method_get" {
 }
 
 #Defining the POST method
-
+/*
 resource "aws_api_gateway_method" "api_counter_method_post" {
   rest_api_id   = aws_api_gateway_rest_api.api_counter.id
   resource_id   = aws_api_gateway_resource.api_counter_gateway.id
   http_method   = "POST"
   authorization = "NONE"
 }
+*/
 
 #Integration Response for GET & POST
 
@@ -77,7 +83,7 @@ resource "aws_api_gateway_integration_response" "api_counter_response_get_200" {
   ]
 }
 
-
+/*
 resource "aws_api_gateway_integration_response" "api_counter_response_post_200" {
   rest_api_id = aws_api_gateway_rest_api.api_counter.id
   resource_id = aws_api_gateway_resource.api_counter_gateway.id
@@ -93,7 +99,7 @@ response_templates = {
    } 
 
 }
-
+*/
 #API Gateway Method Response
 
 resource "aws_api_gateway_method_response" "api_counter_response_method_get" {
@@ -103,7 +109,7 @@ resource "aws_api_gateway_method_response" "api_counter_response_method_get" {
   status_code = "200"
 
 }
-
+/*
 resource "aws_api_gateway_method_response" "api_counter_response_method_post" {
   rest_api_id = aws_api_gateway_rest_api.api_counter.id
   resource_id = aws_api_gateway_resource.api_counter_gateway.id
@@ -114,8 +120,9 @@ resource "aws_api_gateway_method_response" "api_counter_response_method_post" {
      "application/json" = "Empty"
   }
 
-}
 
+}
+  */
 #Granting permissions for API Gateway to interact with Lambda
 
 resource "aws_lambda_permission" "apigw_lambda" {
@@ -149,9 +156,9 @@ resource "aws_api_gateway_deployment" "api_counter_deployment" {
 
  depends_on = [
     aws_api_gateway_method.api_counter_method_get,
-    aws_api_gateway_method.api_counter_method_post,
+   # aws_api_gateway_method.api_counter_method_post,
     aws_api_gateway_integration.api_counter_integration_get,
-    aws_api_gateway_integration.api_counter_integration_post
+    #aws_api_gateway_integration.api_counter_integration_post
   ]
 
 }
@@ -169,7 +176,7 @@ data "aws_iam_policy_document" "api_counter_policy_doc" {
     }
 
     actions   = ["execute-api:Invoke"]
-    resources = [format("%s/%s",aws_api_gateway_rest_api.api_counter.execution_arn,"DEV/main/*")]
+    resources = [format("%s/%s",aws_api_gateway_rest_api.api_counter.execution_arn,"*/GET/main")]
 
   }
 }

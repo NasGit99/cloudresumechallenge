@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cloud Resume Challenge: Nasir</title>
+    <title>Serverless Website</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,15 +57,17 @@
           <!--HOME SECTION-->
           <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
             <h1>Nasir Thomas</h2>
-              <H3>Atlanta, GA</h3>
+              <H3>New York, NY</h3>
           </div>
 
           <!--ABOUT SECTION-->
           <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
             <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">ABOUT</h2>
             <p class="w3-margin-top-2"> 
-              Performance-driven and motivated Systems Analyst specializing in system life cycle development, client relations, and data analysis. 
-              Proven ability to proactively improve processes to ensure continuous operational excellence and optimization.
+              Experienced System Analyst skilled in system architecture, client engagement, and technical support. Proficient
+in analyzing extensive data sets, problem-solving, and presenting insights through visualization. Collaborates
+with clients to identify needs, communicate technical details, and interfaces with stakeholders and
+decision-makers.
             </p>
 
             <p>
@@ -73,7 +75,7 @@
               on an S3 bucket using Cloudfront to enable HTTPS security. Route 53 is used in order to point my Cloudfront distribution to my custom domain. There is also a website counter at
                the bottom of the page that uses a lambda function written in python that saves the visitor counter in Dynamo DB. I have Terraform scripts written in order to 
                manage my AWS resources and be able to deploy them seamlessly. Finally when I push updates to my github repository, 
-               a pipeline in AWS CodePipline runs to update my website's S3 bucket automatically.
+               GitHub Actions updates the S3 Bucket and invalidates the CloudFront Distribution to update the website.
               </thead>
             </p>
           </div>
@@ -88,38 +90,38 @@
 
 
               <div class="">
-                <h4>HealthTrio (Atlanta,GA)</h4>
-                <h5><b>Systems Analyst II</b></h5>
+                <h4>HealthTrio (New York, NY)</h4>
+                <h5><b>Systems Analyst II (Solutions Engineer)</b></h5>
                 <p>Feb 2023 - Present</p>
                 <ul class="w3-ul" style="font-weight: 500;">
-                  <li>Configure and manage FTP credentials for client implementations, ensuring secure and efficient file transfers</li>
-                  <li>Collaborate with clients in meetings to understand their requirements and provide technical support and guidance.</li> 
-                  <li>Manage and maintain employee accounts and access permissions, and ensure efficient and secure access to company systems and resources</li>
-                  <li>Work with developers to identify and troubleshoot occasional AWS issues, to ensure smooth and uninterrupted operation of business-critical applications </li>
+                  <li>Overseeing data migration for legacy data into cloud based data solutions hosted on AWS, for client
+                    implementation projects ranging from $500k - $1.5m</li>
+                  <li>Applying data mining techniques to extract valuable insights from complex datasets with SQL,
+                    improving the client data migration process by 40%</li> 
+                  <li>Conducting training sessions for end-users, ensuring a smooth transition to new systems and providing
+                    comprehensive documentation for ongoing support</li>
+                  <li>Troubleshooting Java based applications to debug client issues for post sales data integration </li>
+                  <li>Configuring firewall, database & application configurations using YAML files for web-based applications
+                    hosted on AWS, ensuring new clients go live within 6-9 month</li>
+                  <li>Configured AWS RDS instances to handle large amounts of data, testing the data migration process for
+                    clients with over 75k in membership, resulting in an 85% increase in data integrity after go-live</li>
+                  <li>Worked closely with stakeholders to establish connectivity between 8+ trading partners to successfully
+                    automate file transfer through SFTP.</li>
+                  <li>Troubleshooting infrastructure and application performance issues for cloud-based applications by
+                    parsing verbose log files hosted on AWS CloudWatch, utilizing Linux</li>
                 </ul>
   
                 <h5><b>Systems Analyst I</b></h5>
                 <p>June 2021 - Feb 2023</p>
                 <ul class="w3-ul" style="font-weight: 500;">
-                  <li>Created simple to complex queries involving joins, sub-queries, cases, and defined variables to resolve issues.</li>
-                  <li>Assessed and proposed software solutions to development teams while determining the impact on existing software and the business.</li> 
-                  <li>Formulated strategies to proactively resolve production issues and improve customer service across 5 million people in seven clients </li>
-                  <li>Conducted detailed analysis and generated key insights to fulfill client CMS requirements </li>
-                  <li>Developed Python scripts to automate the process of user account generation, reducing setup time by 50%</li>
-
+                  <li>Utilized Bash scripts to deploy configuration changes in QA and UAT environments, to fulfill client
+                    requirements and enhance our testing process to meet stringent deadlines</li>
+                  <li>Built a Python script to encode Spanish characters in health insurance documents, speeding up the
+                    process by 60% for over 8 clients and reducing manual effort.</li> 
                 </ul>
               </div>
 
-              <div class="">
-                <h4>Rockdale County Public Schools (Conyers,GA)</h4>
-                <h5><b>Technology Intern</b></h5>
-                <p>Jun. 2019 – Jul. 2019	</p>
-                <ul class="w3-ul" style="font-weight: 500;">
-                  <li>Set up 250+ computers for county wide use, installed software as needed </li>
-                  <li>Prepared, maintained, and repaired technology equipment  </li>
-                  <li>Troubleshooted local school computer hardware and software problems</li>
-                </ul>
-              </div>
+              
              
             <!---EDUCATION SECTION-->
             <div class="w3-container w3-margin-top-2 w3-cursive">
@@ -130,21 +132,27 @@
                 <p>GPA: 3.4</p>
             </div>
 
+
+            <!---CERTIFICATION SECTION-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+              <h3 class="w3-border-amber">CERTIFICATIONS</h3>
+                <h4>AWS</h4>
+                <p>AWS Certified Solutions Architect - Associate (SAA-CO2) - 09/2023</p>
+              
+            </div>
+
             <!--SKILLS SECTION-->
             <div class="w3-container w3-margin-top-2 w3-cursive">
               <h3 class="w3-border-amber">MY SKILLS</h3>
               <!--SOFT SKILLS-->
               <!--TECHNICAL SKILLS-->
                 <ul class="w3-ul" style="font-weight: 500;">
-                 <li>Programming Languages: Python, Shell Scripting(Bash), SQL (PostgreSQL, MS SQL), HTML, CSS, Visual Basic                </li>
-                 <li>CI/CD Tools: Jenkins, Ansible, Git                </li>
-                 <li>Build Tools: Maven                </li>
-                 <li>Virtualization: Vagrant, Docker                </li>
-                 <li>Cloud: AWS (EC2, S3, Route53, CloudFront, Lambda, DynamoDB, API Gateway, Cloudwatch, Athena) </li>
-                 <li>Infrastructure as Code: Terraform</li>
-                 <li>Database management: Designing, Documentation, Troubleshooting, Query Optimization                 </li>
-                 <li>Operating Systems: Windows, Linux (RedHat, centOS, Ubuntu)                </li>
-                 <li>Project management: Agile methodologies, Jira                </li>
+                 <li>Programming Languages: Python, Bash, PostgreSQL, MSSQL, noSQL               </li>
+                 <li>Cloud Computing: Amazon Web Service, EC2, S3, Lambda, RDS, DynamoDb, API Gateway,
+                  Cloudwatch, Athena, Route53</li>
+                 <li>Tools & Technology: Jenkins, Ansible, Linux, Maven, Terraform, Docker, Agile, Jira, Gitlab, CI/CD,GIT</li>
+                 <li>Methodology: Enterprise Architecture, Data Modeling, System Design, System Analysis</li>
+                 <li>Healthcare: 834, 999, TA1, HIPAA Compliance, Medicare, EDI Software, ANSI X12</li>
                 </ul>
             </div>
 
@@ -156,27 +164,14 @@
               <p>E-mail: nasirthomasit@gmail.com</p>
             </div>
           </div>
-          <body onload="updateCounter()">
-            <script>
-              
-        function updateCounter(){
-            fetch('https://snceyg5wdf.execute-api.us-east-1.amazonaws.com/DEV/main',{
-                method: 'GET'
-            })
-          .then(response => {
-            if (
-                // check if response's status is 200
-                response.ok
-            ) {
-              return response.json()
-            } else {
-              throw new Error('something went wrong');
-            }
-          })
-          .then(data => document.getElementById("hits").innerText = data.Visit_Count)
-        }
+          <script>
+            fetch('https://snceyg5wdf.execute-api.us-east-1.amazonaws.com/DEV/main')
+                .then(response => response.json())
+                .then((data) => {
+                    document.getElementById('replaceme').innerText = data['body'].slice(17,19)
+                })
         </script>
-            Visits: <span id="hits"></span>
+            Visits: <span id="replaceme"></span>
         
         <!--FOOTER-->
         <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
