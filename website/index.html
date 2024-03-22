@@ -168,7 +168,7 @@ decision-makers.
             fetch('https://snceyg5wdf.execute-api.us-east-1.amazonaws.com/DEV/main')
                 .then(response => response.json())
                 .then((data) => {
-                    document.getElementById('replaceme').innerText = data['body'].slice(17,19)
+                    document.getElementById('replaceme').innerText = data.body.replace(/"|Visit_Count|{|}|:/g, '')
                 })
         </script>
             Visits: <span id="replaceme"></span>
